@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Evolutionary Terrain Generator</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="leftside">
+        <h2>Evolutionary Terrain Generator</h2>
+        <div id="upload-image">
+          <h3>Upload Image</h3>
+          <input type="file" id="image-upload" />
+        </div>
+        <div id="canvas-container">
+          <div id="current-canvas-container">
+            <h3>Current Terrain</h3>
+            <canvas id="current-canvas"></canvas>
+          </div>
+          <div id="target-canvas-container">
+            <h3>Target Terrain</h3>
+            <canvas id="target-canvas"></canvas>
+          </div>
+        </div>
+
+        <div id="controls">
+          <button id="prev">&lt;&lt; Previous Generation</button>
+          <button id="execute">Execute Command</button>
+          <button id="next">Next Generation &gt;&gt;</button>
+        </div>
+
+        <div id="simulation-info">
+          <p>
+            Simulation Iteration (Commands Executed):
+            <span id="simulation-iteration">0</span>
+          </p>
+          <p>Generation: <span id="simulation-generation">0</span></p>
+          <p>
+            Likeness to Target:
+            <span id="simulation-likeness-to-target">0</span>
+          </p>
+        </div>
+      </div>
+
+      <div id="rightside">
+        <div id="command-fitness-ranking">
+          <h3>Command Fitness Ranking</h3>
+          <p>Population Count: <span id="population-count">0</span></p>
+          <div style="overflow-y: scroll; height: 600px">
+            <table id="command-fitness-ranking-table">
+              <tr>
+                <th>Command</th>
+                <th>Fitness</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="hovered-command-info">
+          <h3>Command #<span id="hovered-command-id">0</span></h3>
+          <p>Command: <span id="hovered-command-text">None</span></p>
+          <p>Fitness: <span id="hovered-command-fitness">0</span></p>
+          <p>Generation: <span id="hovered-command-generation">0</span></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/perlin.js"></script>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
+
+<!-- https://github.com/sjmulder/nbt-js -->

@@ -1,0 +1,131 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #266528;
+}
+
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #3e8e41; /* Green */
+  color: white;
+  cursor: pointer;
+}
+#execute {
+  background-color: #dd5151;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#controls {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #999;
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+#simulation-info {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #999;
+  background-color: #eee;
+}
+
+#container {
+  background-color: #909090;
+  margin: 32px;
+  padding: 10px;
+  display: flex;
+  box-shadow: 0 0 10px #000000;
+}
+
+#leftside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 30px;
+  margin-right: 10px;
+  background-color: #b5b5b5;
+}
+
+#rightside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 30px;
+  background-color: #bcbcbc;
+}
+
+#canvas-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 10px;
+  background-color: #cecece;
+  text-align: center;
+}
+canvas {
+  background-color: #fff;
+  border: 1px solid #000;
+  margin: 10px;
+  image-rendering: pixelated;
+}
+
+#command-fitness-ranking {
+  width: 100%;
+  border-collapse: collapse;
+}
+#command-fitness-ranking td,
+#command-fitness-ranking th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#command-fitness-ranking tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#command-fitness-ranking tr:nth-child(odd) {
+  background-color: #fff;
+}
+#command-fitness-ranking tr:hover {
+  background-color: #ddd;
+}
+#command-fitness-ranking th {
+  padding-top: 12px;
+}
+#command-fitness-ranking h3 {
+  margin: 0;
+  padding: 0;
+}
+#command-fitness-ranking p {
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+}
+
+#hovered-command-info {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #999;
+  background-color: #eee;
+}
